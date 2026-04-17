@@ -7,7 +7,7 @@ import { formatDateKorean } from '../utils/formatDate'
 import type { News } from '../types/news'
 
 const CATEGORY_STYLES: Record<News['category'], string> = {
-  공지: 'bg-blue-50 text-blue-700 border-blue-200',
+  공지: 'bg-brand-gold-pale text-brand-navy border-warm-border',
   행사: 'bg-amber-50 text-amber-700 border-amber-200',
 }
 
@@ -59,7 +59,7 @@ export default function NewsDetailPage() {
   return (
     <article className="py-10 md:py-14">
       <Container size="md">
-        <Link to="/news" className="text-sm text-blue-700 hover:underline">
+        <Link to="/news" className="text-sm text-brand-navy hover:underline">
           ← 예닮 소식
         </Link>
 
@@ -114,10 +114,10 @@ export default function NewsDetailPage() {
           {neighbors.prev ? (
             <Link
               to={`/news/${neighbors.prev.id}`}
-              className="group p-4 rounded-md border border-gray-200 hover:border-blue-300 hover:bg-blue-50/40 transition-colors"
+              className="group p-4 rounded-md border border-gray-200 hover:border-brand-gold/60 hover:bg-brand-gold-pale/40 transition-colors"
             >
               <p className="text-xs text-gray-400">이전 글</p>
-              <p className="mt-1 text-sm font-medium text-gray-900 group-hover:text-blue-700 line-clamp-1">
+              <p className="mt-1 text-sm font-medium text-gray-900 group-hover:text-brand-navy line-clamp-1">
                 ← {neighbors.prev.title}
               </p>
             </Link>
@@ -127,10 +127,10 @@ export default function NewsDetailPage() {
           {neighbors.next ? (
             <Link
               to={`/news/${neighbors.next.id}`}
-              className="group p-4 rounded-md border border-gray-200 hover:border-blue-300 hover:bg-blue-50/40 transition-colors text-right"
+              className="group p-4 rounded-md border border-gray-200 hover:border-brand-gold/60 hover:bg-brand-gold-pale/40 transition-colors text-right"
             >
               <p className="text-xs text-gray-400">다음 글</p>
-              <p className="mt-1 text-sm font-medium text-gray-900 group-hover:text-blue-700 line-clamp-1">
+              <p className="mt-1 text-sm font-medium text-gray-900 group-hover:text-brand-navy line-clamp-1">
                 {neighbors.next.title} →
               </p>
             </Link>

@@ -6,7 +6,7 @@ export default function MissionStatement() {
     <section className="py-16 md:py-24">
       <Container size="md">
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-700">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-navy">
             Our Mission
           </p>
           <blockquote className="mt-6 text-2xl md:text-4xl font-bold text-gray-900 leading-snug">

@@ -12,15 +12,15 @@ export default function SermonCard({ sermon }: SermonCardProps) {
       {sermon.thumbnailUrl ? (
         <Card.Image src={sermon.thumbnailUrl} alt={sermon.title} />
       ) : (
-        <div className="aspect-video bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-blue-400">
+        <div className="aspect-video bg-gradient-to-br from-brand-gold-pale to-brand-gold-pale flex items-center justify-center">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-brand-gold">
             <path d="M8 5v14l11-7z" />
           </svg>
         </div>
       )}
       <Card.Body>
         {sermon.series && (
-          <p className="text-xs font-semibold uppercase tracking-wider text-blue-700">
+          <p className="text-xs font-semibold uppercase tracking-wider text-brand-navy">
             {sermon.series}
           </p>
         )}

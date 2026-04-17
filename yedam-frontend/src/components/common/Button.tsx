@@ -32,10 +32,10 @@ type AnchorProps = BaseProps & {
 type Props = ButtonProps | LinkProps | AnchorProps
 
 const variantClass: Record<Variant, string> = {
-  primary: 'bg-blue-700 text-white hover:bg-blue-800',
-  secondary: 'bg-gray-800 text-white hover:bg-gray-900',
-  outline: 'border border-gray-300 text-gray-800 hover:bg-gray-50',
-  ghost: 'text-gray-700 hover:bg-gray-100',
+  primary: 'bg-brand-navy text-white hover:bg-brand-navy-dark',
+  secondary: 'bg-brand-gold text-brand-navy hover:bg-brand-gold-light',
+  outline: 'border border-brand-navy/30 text-brand-navy hover:bg-warm-stone hover:border-brand-navy',
+  ghost: 'text-brand-navy hover:bg-warm-stone',
 }
 
 const sizeClass: Record<Size, string> = {
@@ -45,7 +45,7 @@ const sizeClass: Record<Size, string> = {
 }
 
 const base =
-  'inline-flex items-center justify-center rounded-md font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2'
+  'inline-flex items-center justify-center rounded-md font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2'
 
 export default function Button(props: Props) {
   const { children, variant = 'primary', size = 'md', className = '' } = props

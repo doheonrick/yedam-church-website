@@ -21,7 +21,7 @@ export default function SermonFilters({
           value={keyword}
           onChange={(e) => onKeywordChange(e.target.value)}
           placeholder="제목, 본문, 설교자로 검색"
-          className="w-full pl-10 pr-3 py-2.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          className="w-full pl-10 pr-3 py-2.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-brand-gold"
         />
         <svg
           width="18"
@@ -69,8 +69,8 @@ function FilterChip({ label, active, onClick }: FilterChipProps) {
       onClick={onClick}
       className={`px-4 py-1.5 text-sm rounded-full border transition-colors ${
         active
-          ? 'bg-blue-700 text-white border-blue-700'
-          : 'bg-white text-gray-700 border-gray-300 hover:border-blue-400 hover:text-blue-700'
+          ? 'bg-brand-navy text-white border-brand-navy'
+          : 'bg-white text-gray-700 border-gray-300 hover:border-brand-gold hover:text-brand-navy'
       }`}
     >
       {label}

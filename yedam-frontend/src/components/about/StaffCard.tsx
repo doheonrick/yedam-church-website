@@ -18,7 +18,7 @@ const honorific: Record<StaffRole, string> = {
 export default function StaffCard({ staff }: StaffCardProps) {
   return (
     <Card>
-      <div className="aspect-square bg-gray-100 flex items-center justify-center text-gray-300">
+      <div className="aspect-square bg-warm-stone flex items-center justify-center text-gray-300">
         {staff.photoUrl ? (
           <img src={staff.photoUrl} alt={staff.name} className="w-full h-full object-cover" />
         ) : (
@@ -28,7 +28,7 @@ export default function StaffCard({ staff }: StaffCardProps) {
         )}
       </div>
       <Card.Body>
-        <p className="text-xs font-semibold uppercase tracking-wider text-blue-700">
+        <p className="text-xs font-semibold uppercase tracking-wider text-brand-navy">
           {staff.role}
           {staff.department && ` · ${staff.department}`}
         </p>

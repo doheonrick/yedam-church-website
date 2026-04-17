@@ -39,8 +39,8 @@ function FilterChip({ label, active, onClick }: FilterChipProps) {
       onClick={onClick}
       className={`px-4 py-1.5 text-sm rounded-full border transition-colors ${
         active
-          ? 'bg-blue-700 text-white border-blue-700'
-          : 'bg-white text-gray-700 border-gray-300 hover:border-blue-400 hover:text-blue-700'
+          ? 'bg-brand-navy text-white border-brand-navy'
+          : 'bg-white text-gray-700 border-gray-300 hover:border-brand-gold hover:text-brand-navy'
       }`}
     >
       {label}

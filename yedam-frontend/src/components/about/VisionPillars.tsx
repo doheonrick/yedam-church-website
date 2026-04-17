@@ -4,7 +4,7 @@ import { visionPillars } from '../../constants/visionPillars'
 
 export default function VisionPillars() {
   return (
-    <section className="bg-gray-50 py-16 md:py-20">
+    <section className="bg-warm-cream py-16 md:py-20">
       <Container>
         <SectionTitle
           eyebrow="Vision Statement"
@@ -19,7 +19,7 @@ export default function VisionPillars() {
               className="bg-white rounded-lg border border-gray-200 p-8"
             >
               <div className="flex items-baseline gap-4">
-                <span className="text-3xl font-bold text-blue-700 leading-none">
+                <span className="text-3xl font-bold text-brand-navy leading-none">
                   {pillar.number}
                 </span>
                 <h3 className="text-xl font-semibold text-gray-900">{pillar.title}</h3>
@@ -27,7 +27,7 @@ export default function VisionPillars() {
               <ul className="mt-5 space-y-2">
                 {pillar.items.map((item) => (
                   <li key={item} className="flex gap-2 text-gray-700">
-                    <span className="text-blue-700 flex-shrink-0">•</span>
+                    <span className="text-brand-navy flex-shrink-0">•</span>
                     <span>{item}</span>
                   </li>
                 ))}

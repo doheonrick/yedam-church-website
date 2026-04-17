@@ -16,7 +16,7 @@ function extractYouTubeId(url: string): string | null {
 export default function SermonVideoEmbed({ videoUrl }: SermonVideoEmbedProps) {
   if (!videoUrl) {
     return (
-      <div className="aspect-video bg-gray-100 flex flex-col items-center justify-center text-gray-400">
+      <div className="aspect-video bg-warm-stone flex flex-col items-center justify-center text-gray-400">
         <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
           <path d="M8 5v14l11-7z" />
         </svg>

@@ -25,7 +25,7 @@ export default function OfferingPage() {
           {/* Zelle */}
           <div className="mt-12">
             <SectionTitle eyebrow="Online" title="Zelle 송금" />
-            <div className="mt-6 p-6 sm:p-8 rounded-lg border border-blue-200 bg-blue-50">
+            <div className="mt-6 p-6 sm:p-8 rounded-lg border border-warm-border bg-brand-gold-pale">
               <p className="text-sm text-gray-700">
                 미국 주요 은행 앱(Bank of America, Chase, Wells Fargo, Citi 등)의{' '}
                 <span className="font-semibold">Zelle</span> 기능으로 아래 이메일에 송금해 주세요.
@@ -38,7 +38,7 @@ export default function OfferingPage() {
               </div>
               <p className="mt-4 text-xs text-gray-600">
                 ※ 송금 시 <span className="font-semibold">메모(Memo)</span>란에 헌금자 이름과
-                헌금 종류를 함께 적어주세요. 예) <code className="px-1.5 py-0.5 bg-white rounded text-blue-700">홍길동 / 십일조</code>
+                헌금 종류를 함께 적어주세요. 예) <code className="px-1.5 py-0.5 bg-white rounded text-brand-navy">홍길동 / 십일조</code>
               </p>
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function OfferingPage() {
               </p>
               <p className="mt-4 text-xs text-gray-500">
                 예배 시간은{' '}
-                <a href="/worship" className="text-blue-700 hover:underline">
+                <a href="/worship" className="text-brand-navy hover:underline">
                   예배 안내
                 </a>
                 에서 확인하실 수 있습니다.
@@ -79,16 +79,16 @@ export default function OfferingPage() {
           </div>
 
           {/* 문의 */}
-          <div className="mt-12 p-5 rounded-md bg-gray-50 border border-gray-200 text-center">
+          <div className="mt-12 p-5 rounded-md bg-warm-cream border border-gray-200 text-center">
             <p className="text-sm text-gray-700">
               헌금 관련 문의는 교회 사무국으로 연락 주세요.
             </p>
             <p className="mt-1 text-sm text-gray-600">
-              <a href={`tel:${siteInfo.phone.replace(/-/g, '')}`} className="text-blue-700 hover:underline">
+              <a href={`tel:${siteInfo.phone.replace(/-/g, '')}`} className="text-brand-navy hover:underline">
                 {siteInfo.phone}
               </a>{' '}
               ·{' '}
-              <a href={`mailto:${siteInfo.email}`} className="text-blue-700 hover:underline">
+              <a href={`mailto:${siteInfo.email}`} className="text-brand-navy hover:underline">
                 {siteInfo.email}
               </a>
             </p>
@@ -121,7 +121,7 @@ function CopyField({ value }: CopyFieldProps) {
       <button
         type="button"
         onClick={handleCopy}
-        className="px-4 py-2.5 text-sm font-medium rounded-md bg-blue-700 text-white hover:bg-blue-800 transition-colors min-w-[80px]"
+        className="px-4 py-2.5 text-sm font-medium rounded-md bg-brand-navy text-white hover:bg-brand-navy-dark transition-colors min-w-[80px]"
       >
         {copied ? '복사됨' : '복사'}
       </button>

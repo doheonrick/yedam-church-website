@@ -9,7 +9,7 @@ export default function WorshipScheduleSection() {
         <div className="space-y-14">
           {worshipGroups.map((group) => (
             <div key={group.title}>
-              <h2 className="text-2xl font-bold text-gray-900 border-b-2 border-blue-700 pb-3">
+              <h2 className="text-2xl font-bold text-gray-900 border-b-2 border-brand-navy pb-3">
                 {group.title}
               </h2>
               <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -22,12 +22,12 @@ export default function WorshipScheduleSection() {
                       {service.nameEn && (
                         <p className="mt-0.5 text-xs text-gray-400">{service.nameEn}</p>
                       )}
-                      <p className="mt-3 text-blue-700 font-medium">{service.time}</p>
+                      <p className="mt-3 text-brand-navy font-medium">{service.time}</p>
                       {service.location && (
                         <p className="mt-1 text-sm text-gray-500">📍 {service.location}</p>
                       )}
                       {service.note && (
-                        <p className="mt-3 text-xs text-gray-500 bg-gray-50 rounded px-2 py-1.5">
+                        <p className="mt-3 text-xs text-gray-500 bg-warm-cream rounded px-2 py-1.5">
                           {service.note}
                         </p>
                       )}
@@ -37,7 +37,7 @@ export default function WorshipScheduleSection() {
                             href={service.zoomUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-700 hover:text-blue-800"
+                            className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-navy hover:text-brand-navy-dark"
                           >
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                               <polygon points="23 7 16 12 23 17 23 7" />

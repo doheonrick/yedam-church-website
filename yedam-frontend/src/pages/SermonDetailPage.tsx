@@ -55,13 +55,13 @@ export default function SermonDetailPage() {
   return (
     <article className="py-10 md:py-14">
       <Container size="md">
-        <Link to="/sermons" className="text-sm text-blue-700 hover:underline">
+        <Link to="/sermons" className="text-sm text-brand-navy hover:underline">
           ← 설교 목록
         </Link>
 
         <header className="mt-4">
           {sermon.series && (
-            <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
+            <p className="text-sm font-semibold uppercase tracking-wider text-brand-navy">
               {sermon.series}
             </p>
           )}
@@ -98,10 +98,10 @@ export default function SermonDetailPage() {
           {neighbors.prev ? (
             <Link
               to={`/sermons/${neighbors.prev.id}`}
-              className="group p-4 rounded-md border border-gray-200 hover:border-blue-300 hover:bg-blue-50/40 transition-colors"
+              className="group p-4 rounded-md border border-gray-200 hover:border-brand-gold/60 hover:bg-brand-gold-pale/40 transition-colors"
             >
               <p className="text-xs text-gray-400">이전 설교</p>
-              <p className="mt-1 text-sm font-medium text-gray-900 group-hover:text-blue-700 line-clamp-1">
+              <p className="mt-1 text-sm font-medium text-gray-900 group-hover:text-brand-navy line-clamp-1">
                 ← {neighbors.prev.title}
               </p>
             </Link>
@@ -111,10 +111,10 @@ export default function SermonDetailPage() {
           {neighbors.next ? (
             <Link
               to={`/sermons/${neighbors.next.id}`}
-              className="group p-4 rounded-md border border-gray-200 hover:border-blue-300 hover:bg-blue-50/40 transition-colors text-right"
+              className="group p-4 rounded-md border border-gray-200 hover:border-brand-gold/60 hover:bg-brand-gold-pale/40 transition-colors text-right"
             >
               <p className="text-xs text-gray-400">다음 설교</p>
-              <p className="mt-1 text-sm font-medium text-gray-900 group-hover:text-blue-700 line-clamp-1">
+              <p className="mt-1 text-sm font-medium text-gray-900 group-hover:text-brand-navy line-clamp-1">
                 {neighbors.next.title} →
               </p>
             </Link>
