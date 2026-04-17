@@ -18,7 +18,6 @@ import GalleryPage from '../pages/GalleryPage'
 import ForumPage from '../pages/ForumPage'
 import ContactPage from '../pages/ContactPage'
 import OfferingPage from '../pages/OfferingPage'
-import EnglishPage from '../pages/EnglishPage'
 import NotFoundPage from '../pages/NotFoundPage'
 
 export const appRouter = createBrowserRouter([
@@ -49,7 +48,6 @@ export const appRouter = createBrowserRouter([
       { path: 'forum', Component: ForumPage },
       { path: 'contact', Component: ContactPage },
       { path: 'offering', Component: OfferingPage },
-      { path: 'english', Component: EnglishPage },
       { path: '*', Component: NotFoundPage },
     ],
   },

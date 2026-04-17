@@ -88,6 +88,21 @@ function DesktopNavItem({ item, open, onToggle, onClose }: DesktopNavItemProps) 
   const activeClass = 'text-blue-700'
 
   if (!item.children || item.children.length === 0) {
+    if (item.external) {
+      return (
+        <a
+          href={item.path}
+          target="_blank"
+          rel="noreferrer noopener"
+          className={`${linkClass} inline-flex items-center gap-1`}
+        >
+          {item.label}
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <path d="M4 2h6v6M10 2L4 8M10 7v3H2V2h3" />
+          </svg>
+        </a>
+      )
+    }
     return (
       <NavLink
         to={item.path}
@@ -145,6 +160,23 @@ function MobileNavItem({ item }: MobileNavItemProps) {
   const hasChildren = item.children && item.children.length > 0
 
   if (!hasChildren) {
+    if (item.external) {
+      return (
+        <li>
+          <a
+            href={item.path}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="flex items-center gap-1 px-3 py-3 text-sm text-gray-700"
+          >
+            {item.label}
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M4 2h6v6M10 2L4 8M10 7v3H2V2h3" />
+            </svg>
+          </a>
+        </li>
+      )
+    }
     return (
       <li>
         <NavLink

@@ -1,6 +1,7 @@
 export interface NavItem {
   label: string
   path: string
+  external?: boolean
   children?: NavItem[]
 }
 
@@ -37,6 +38,6 @@ export const mainNav: NavItem[] = [
   { label: '예닮나눔터', path: '/forum' },
   { label: '예닮소식', path: '/news' },
   { label: '오시는 길', path: '/contact' },
-  { label: '영어회중예배', path: '/english' },
+  { label: '영어회중예배', path: 'https://www.anfdallas.org/', external: true },
   { label: '온라인 봉헌', path: '/offering' },
 ]
