@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Container from '../common/Container'
 import SectionTitle from '../common/SectionTitle'
 import { siteInfo } from '../../constants/siteInfo'
@@ -23,7 +24,18 @@ export default function IntroSection() {
             있습니다.
           </p>
           <p>
-            교회 소개에 관한 자세한 내용은 추후 업데이트될 예정입니다.
+            미국 최대 복음주의 교단인{' '}
+            <strong className="text-brand-navy">남침례회(SBC)</strong> 소속으로, 한인 회중
+            예배와 함께{' '}
+            <strong className="text-brand-navy">영어회중 예배(ANF, A New Fellowship)</strong>를
+            운영하여 세대와 언어를 아우르는 공동체를 세워가고 있습니다.
+          </p>
+          <p>
+            예배 시간, 목장 참여, 새가족 등록 등 궁금하신 점이 있으시다면 언제든{' '}
+            <Link to="/contact" className="text-brand-navy underline underline-offset-2 hover:text-brand-navy-dark">
+              연락처 페이지
+            </Link>
+            를 통해 문의해 주세요. 처음 오시는 분들을 따뜻하게 맞이하겠습니다.
           </p>
         </div>
       </Container>
