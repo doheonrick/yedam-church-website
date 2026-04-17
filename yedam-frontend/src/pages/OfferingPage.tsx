@@ -6,15 +6,6 @@ import { siteInfo } from '../constants/siteInfo'
 
 const ZELLE_EMAIL = 'rockchurch.zelle@gmail.com'
 
-const OFFERING_TYPES = [
-  { name: '주일헌금', memo: '주일헌금' },
-  { name: '십일조', memo: '십일조' },
-  { name: '감사헌금', memo: '감사헌금' },
-  { name: '선교헌금', memo: '선교헌금' },
-  { name: '건축헌금', memo: '건축헌금' },
-  { name: '구제헌금', memo: '구제헌금' },
-] as const
-
 export default function OfferingPage() {
   return (
     <>
@@ -50,22 +41,6 @@ export default function OfferingPage() {
                 헌금 종류를 함께 적어주세요. 예) <code className="px-1.5 py-0.5 bg-white rounded text-blue-700">홍길동 / 십일조</code>
               </p>
             </div>
-          </div>
-
-          {/* 헌금 종류 */}
-          <div className="mt-12">
-            <SectionTitle title="헌금 종류" />
-            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-              {OFFERING_TYPES.map((t) => (
-                <li
-                  key={t.name}
-                  className="flex items-center justify-between p-4 rounded-md border border-gray-200 bg-white"
-                >
-                  <span className="text-sm font-medium text-gray-900">{t.name}</span>
-                  <span className="text-xs text-gray-500">메모: {t.memo}</span>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* 수표 / 직접 */}
