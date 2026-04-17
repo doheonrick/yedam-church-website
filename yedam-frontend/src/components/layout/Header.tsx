@@ -41,9 +41,16 @@ export default function Header() {
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${headerCls}`}>
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-baseline gap-2">
-          <span className="text-xl font-bold text-brand-navy">{siteInfo.shortName}</span>
-          <span className="hidden sm:inline text-xs font-semibold text-brand-gold">{siteInfo.nickname}</span>
+        <Link to="/" className="flex items-center gap-2.5">
+          <img
+            src="/logo.png"
+            alt={`${siteInfo.shortName} 로고`}
+            className="w-9 h-9 object-contain"
+          />
+          <div className="flex items-baseline gap-2">
+            <span className="text-xl font-bold text-brand-navy">{siteInfo.shortName}</span>
+            <span className="hidden sm:inline text-xs font-semibold text-brand-gold">{siteInfo.nickname}</span>
+          </div>
         </Link>
 
         <nav ref={navRef} className="hidden xl:flex items-center gap-1">
