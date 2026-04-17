@@ -31,6 +31,31 @@ export default function WorshipScheduleSection() {
                           {service.note}
                         </p>
                       )}
+                      {service.zoomUrl && (
+                        <div className="mt-4 pt-4 border-t border-gray-100">
+                          <a
+                            href={service.zoomUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-700 hover:text-blue-800"
+                          >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                              <polygon points="23 7 16 12 23 17 23 7" />
+                              <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                            </svg>
+                            Zoom 참여하기
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                              <path d="M7 17L17 7" />
+                              <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                          </a>
+                          {service.meetingId && (
+                            <p className="mt-1.5 text-xs text-gray-500">
+                              Meeting ID: <span className="font-mono">{service.meetingId}</span>
+                            </p>
+                          )}
+                        </div>
+                      )}
                     </Card.Body>
                   </Card>
                 ))}

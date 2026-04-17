@@ -4,6 +4,8 @@ export interface WorshipService {
   time: string
   location?: string
   note?: string
+  zoomUrl?: string
+  meetingId?: string
 }
 
 export interface WorshipGroup {
@@ -42,9 +44,12 @@ export const worshipGroups: WorshipGroup[] = [
     title: '새벽 기도회',
     items: [
       {
-        name: '새벽기도',
+        name: '욥기로 여는 아침묵상',
         time: '화 · 수 · 목 · 금 오전 6:00',
         location: 'Zoom',
+        zoomUrl:
+          'https://us02web.zoom.us/j/87210897915?pwd=10B0RFz2t0YnvMw4gvr3NyzjouCHva.1',
+        meetingId: '872 1089 7915',
       },
     ],
   },
