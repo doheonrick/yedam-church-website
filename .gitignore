@@ -1,3 +1,6 @@
+# node
+node_modules/
+
 # 작업용 메모/분석 파일
 website_analysis.md
 claude_code_prompts.md
