@@ -4,7 +4,15 @@ import StaffCard from './StaffCard'
 import { staffService } from '../../services/staffService'
 import type { Staff, StaffRole } from '../../types/staff'
 
-const groupOrder: StaffRole[] = ['담임목사', '부목사', '전도사', '장로', '권사', '집사']
+const groupOrder: StaffRole[] = [
+  '담임목사',
+  '부목사',
+  '영어회중 목사',
+  '전도사',
+  '장로',
+  '권사',
+  '집사',
+]
 
 function groupByRole(items: Staff[]): Map<StaffRole, Staff[]> {
   const map = new Map<StaffRole, Staff[]>()

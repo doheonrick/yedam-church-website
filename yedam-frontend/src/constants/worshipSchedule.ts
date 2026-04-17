@@ -1,39 +1,61 @@
 export interface WorshipService {
   name: string
+  nameEn?: string
   time: string
   location?: string
-  description?: string
+  note?: string
 }
 
-export const worshipSchedule: WorshipService[] = [
+export interface WorshipGroup {
+  title: string
+  items: WorshipService[]
+}
+
+export const worshipGroups: WorshipGroup[] = [
   {
-    name: '주일 1부 예배',
-    time: '주일 오전 9:00',
-    location: '본당',
+    title: '주일 예배',
+    items: [
+      { name: '1부 예배', time: '주일 오전 9:00', location: '본당' },
+      { name: '2부 예배', time: '주일 오전 11:00', location: '본당' },
+      { name: '3부 예배', time: '주일 오후 2:00', location: '본당' },
+      { name: '중고등부 예배', time: '주일 오전 11:00', location: '예닮채플' },
+      {
+        name: '영어회중 예배 (ANF)',
+        nameEn: 'English Ministry',
+        time: '주일 오전 9:00 & 11:00',
+        location: 'ANF 예배당',
+      },
+    ],
   },
   {
-    name: '주일 2부 예배',
-    time: '주일 오전 11:00',
-    location: '본당',
+    title: '수요 예배',
+    items: [
+      {
+        name: '수요예배',
+        time: '매주 수요일 오후 7:30',
+        location: '본당',
+        note: '매달 첫째 주는 월삭 기도회',
+      },
+    ],
   },
   {
-    name: '주일 오후 예배',
-    time: '주일 오후 2:00',
-    location: '본당',
+    title: '새벽 기도회',
+    items: [
+      {
+        name: '새벽기도',
+        time: '화 · 수 · 목 · 금 오전 6:00',
+        location: 'Zoom',
+      },
+    ],
   },
   {
-    name: '수요예배',
-    time: '수요일 오후 7:30',
-    location: '본당',
-  },
-  {
-    name: '금요기도회',
-    time: '금요일 오후 8:00',
-    location: '본당',
-  },
-  {
-    name: '새벽기도회',
-    time: '화-토 오전 5:30',
-    location: '본당',
+    title: '목장 · 삶공부',
+    items: [
+      { name: '목장 모임', time: '각 목장별 진행', location: '가정/교회' },
+      { name: '삶공부', time: '매주 화 · 목 오후 7:00', location: '본당 & 코이노니아' },
+    ],
   },
 ]
+
+// 하위 호환용 flat 목록
+export const worshipSchedule: WorshipService[] = worshipGroups.flatMap((g) => g.items)

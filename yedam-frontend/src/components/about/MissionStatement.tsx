@@ -13,9 +13,10 @@ export default function MissionStatement() {
             “{siteInfo.slogan}”
           </blockquote>
           <p className="mt-8 text-gray-600 leading-relaxed max-w-2xl mx-auto">
-            예닮교회는 잃어버린 영혼을 하나님께로 인도하고, 그들을 예수 그리스도의 모습을
-            닮은 온전한 제자로 세우는 것을 사명으로 삼습니다. 모든 사역의 중심에는
-            복음과 사람이 있습니다.
+            {siteInfo.name}는 잃어버린 영혼을 하나님께로 인도하고, 그들을 예수
+            그리스도를 닮은 온전한 제자로 세우는 것을 교회의 존재 목적으로 삼습니다.
+            2005년부터 이어진 가정교회(목장) 체계를 통해 사랑과 섬김의 공동체를
+            세워가고 있습니다.
           </p>
         </div>
       </Container>

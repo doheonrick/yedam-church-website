@@ -3,11 +3,7 @@ export interface HistoryEntry {
   event: string
 }
 
+// 실제 교회 연혁 확보 전까지는 확인된 사실만 기재
 export const churchHistory: HistoryEntry[] = [
-  { year: '2010', event: '예닮교회 개척 예배' },
-  { year: '2013', event: '첫 성전 이전 및 봉헌' },
-  { year: '2016', event: '교육부 및 청년부 신설' },
-  { year: '2019', event: '해외 선교 사역 시작 (필리핀)' },
-  { year: '2022', event: '현재 성전으로 이전' },
-  { year: '2025', event: '창립 15주년 감사예배' },
+  { year: '2005', event: '가정교회(목장) 체계 시작' },
 ]

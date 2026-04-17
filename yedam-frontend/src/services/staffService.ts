@@ -1,7 +1,15 @@
 import { mockStaff } from '../data/mockStaff'
 import type { Staff, StaffRole } from '../types/staff'
 
-const roleOrder: StaffRole[] = ['담임목사', '부목사', '전도사', '장로', '권사', '집사']
+const roleOrder: StaffRole[] = [
+  '담임목사',
+  '부목사',
+  '영어회중 목사',
+  '전도사',
+  '장로',
+  '권사',
+  '집사',
+]
 
 export const staffService = {
   async getAll(): Promise<Staff[]> {
