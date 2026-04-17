@@ -2,9 +2,13 @@ import { mockSermons } from '../data/mockSermons'
 import type { Sermon } from '../types/sermon'
 import type { Paginated } from '../types/common'
 
+export type SermonSeries = '주일예배' | '수요예배'
+
+export const SERMON_SERIES: SermonSeries[] = ['주일예배', '수요예배']
+
 export interface SermonQuery {
   keyword?: string
-  preacher?: string
+  series?: SermonSeries | ''
   page?: number
   pageSize?: number
 }
@@ -16,7 +20,7 @@ function sortByDateDesc(items: Sermon[]) {
 function applyFilters(items: Sermon[], q: SermonQuery): Sermon[] {
   const keyword = q.keyword?.trim().toLowerCase()
   return items.filter((s) => {
-    if (q.preacher && s.preacher !== q.preacher) return false
+    if (q.series && s.series !== q.series) return false
     if (keyword) {
       const hay = `${s.title} ${s.preacher} ${s.scripture} ${s.description ?? ''} ${s.series ?? ''}`.toLowerCase()
       if (!hay.includes(keyword)) return false
@@ -49,10 +53,6 @@ export const sermonService = {
       page,
       pageSize,
     }
-  },
-
-  async getPreachers(): Promise<string[]> {
-    return Array.from(new Set(mockSermons.map((s) => s.preacher))).sort()
   },
 
   async getNeighbors(id: string): Promise<{ prev: Sermon | null; next: Sermon | null }> {

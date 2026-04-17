@@ -4,38 +4,33 @@ import Container from '../components/common/Container'
 import Pagination from '../components/common/Pagination'
 import SermonCard from '../components/sermons/SermonCard'
 import SermonFilters from '../components/sermons/SermonFilters'
-import { sermonService } from '../services/sermonService'
+import { sermonService, type SermonSeries } from '../services/sermonService'
 import type { Sermon } from '../types/sermon'
 
 const PAGE_SIZE = 9
 
 export default function SermonsPage() {
   const [keyword, setKeyword] = useState('')
-  const [preacher, setPreacher] = useState('')
+  const [series, setSeries] = useState<SermonSeries | ''>('')
   const [page, setPage] = useState(1)
   const [items, setItems] = useState<Sermon[]>([])
   const [total, setTotal] = useState(0)
-  const [preachers, setPreachers] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    sermonService.getPreachers().then(setPreachers)
-  }, [])
-
-  useEffect(() => {
     setPage(1)
-  }, [keyword, preacher])
+  }, [keyword, series])
 
   useEffect(() => {
     setLoading(true)
     sermonService
-      .search({ keyword, preacher, page, pageSize: PAGE_SIZE })
+      .search({ keyword, series, page, pageSize: PAGE_SIZE })
       .then((res) => {
         setItems(res.items)
         setTotal(res.total)
       })
       .finally(() => setLoading(false))
-  }, [keyword, preacher, page])
+  }, [keyword, series, page])
 
   return (
     <>
@@ -44,10 +39,9 @@ export default function SermonsPage() {
         <Container>
           <SermonFilters
             keyword={keyword}
-            preacher={preacher}
-            preachers={preachers}
+            series={series}
             onKeywordChange={setKeyword}
-            onPreacherChange={setPreacher}
+            onSeriesChange={setSeries}
           />
 
           <div className="mt-6 text-sm text-gray-500">

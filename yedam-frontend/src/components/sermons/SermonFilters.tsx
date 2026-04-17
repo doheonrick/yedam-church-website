@@ -1,21 +1,21 @@
+import { SERMON_SERIES, type SermonSeries } from '../../services/sermonService'
+
 interface SermonFiltersProps {
   keyword: string
-  preacher: string
-  preachers: string[]
+  series: SermonSeries | ''
   onKeywordChange: (v: string) => void
-  onPreacherChange: (v: string) => void
+  onSeriesChange: (v: SermonSeries | '') => void
 }
 
 export default function SermonFilters({
   keyword,
-  preacher,
-  preachers,
+  series,
   onKeywordChange,
-  onPreacherChange,
+  onSeriesChange,
 }: SermonFiltersProps) {
   return (
-    <div className="flex flex-col sm:flex-row gap-3">
-      <div className="relative flex-1">
+    <div className="space-y-4">
+      <div className="relative">
         <input
           type="search"
           value={keyword}
@@ -36,18 +36,44 @@ export default function SermonFilters({
           <path d="M21 21l-4.35-4.35" />
         </svg>
       </div>
-      <select
-        value={preacher}
-        onChange={(e) => onPreacherChange(e.target.value)}
-        className="px-3 py-2.5 text-sm border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:min-w-[160px]"
-      >
-        <option value="">전체 설교자</option>
-        {preachers.map((p) => (
-          <option key={p} value={p}>
-            {p}
-          </option>
+
+      <div className="flex flex-wrap gap-2">
+        <FilterChip
+          label="전체"
+          active={series === ''}
+          onClick={() => onSeriesChange('')}
+        />
+        {SERMON_SERIES.map((s) => (
+          <FilterChip
+            key={s}
+            label={s}
+            active={series === s}
+            onClick={() => onSeriesChange(s)}
+          />
         ))}
-      </select>
+      </div>
     </div>
+  )
+}
+
+interface FilterChipProps {
+  label: string
+  active: boolean
+  onClick: () => void
+}
+
+function FilterChip({ label, active, onClick }: FilterChipProps) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`px-4 py-1.5 text-sm rounded-full border transition-colors ${
+        active
+          ? 'bg-blue-700 text-white border-blue-700'
+          : 'bg-white text-gray-700 border-gray-300 hover:border-blue-400 hover:text-blue-700'
+      }`}
+    >
+      {label}
+    </button>
   )
 }
