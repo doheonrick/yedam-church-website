@@ -23,6 +23,11 @@ export default function LatestNewsSection() {
             전체 보기 →
           </Button>
         </div>
+        {items.length === 0 ? (
+          <div className="mt-8 py-12 text-center text-gray-400 bg-white rounded-lg border border-gray-200">
+            등록된 소식이 없습니다.
+          </div>
+        ) : (
         <ul className="mt-8 divide-y divide-gray-200 bg-white rounded-lg border border-gray-200">
           {items.map((item) => (
             <li key={item.id}>
@@ -39,6 +44,7 @@ export default function LatestNewsSection() {
             </li>
           ))}
         </ul>
+        )}
       </Container>
     </section>
   )
