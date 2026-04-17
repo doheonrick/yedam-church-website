@@ -6,8 +6,6 @@ import VisionPage from '../pages/VisionPage'
 import StaffPage from '../pages/StaffPage'
 import HistoryPage from '../pages/HistoryPage'
 import WorshipPage from '../pages/WorshipPage'
-import SermonsPage from '../pages/SermonsPage'
-import SermonDetailPage from '../pages/SermonDetailPage'
 import ColumnsPage from '../pages/ColumnsPage'
 import CommunityPage from '../pages/CommunityPage'
 import HouseChurchesPage from '../pages/HouseChurchesPage'
@@ -32,8 +30,6 @@ export const appRouter = createBrowserRouter([
       { path: 'staff', Component: StaffPage },
       { path: 'history', Component: HistoryPage },
       // 목회자코너
-      { path: 'sermons', Component: SermonsPage },
-      { path: 'sermons/:id', Component: SermonDetailPage },
       { path: 'columns', Component: ColumnsPage },
       // 예배
       { path: 'worship', Component: WorshipPage },

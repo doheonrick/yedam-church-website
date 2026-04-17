@@ -31,9 +31,9 @@ const links: QuickLink[] = [
     ),
   },
   {
-    label: '설교 말씀',
-    description: '주일 · 수요 설교 다시 듣기',
-    to: '/sermons',
+    label: '목회칼럼',
+    description: '담임 목사님의 칼럼을 만나보세요',
+    to: '/columns',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M4 19.5V4a1 1 0 011-1h14a1 1 0 011 1v15.5a1 1 0 01-1 1H5a1 1 0 01-1-1z" />
@@ -68,7 +68,7 @@ export default function QuickLinksSection() {
               <div className="text-brand-gold mb-4 group-hover:scale-110 transition-transform">
                 {link.icon}
               </div>
-              <h3 className="font-display text-lg font-semibold text-warm-text">
+              <h3 className="text-base font-semibold text-warm-text">
                 {link.label}
               </h3>
               <p className="mt-1 text-sm text-muted-text leading-relaxed">

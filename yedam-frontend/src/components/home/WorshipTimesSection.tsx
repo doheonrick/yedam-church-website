@@ -21,8 +21,8 @@ export default function WorshipTimesSection() {
             >
               <div className="absolute top-0 left-0 w-1 h-full bg-brand-gold rounded-l-xl" />
               <div className="pl-4">
-                <h3 className="font-display text-lg font-semibold text-warm-text">{service.name}</h3>
-                <p className="font-display mt-3 text-2xl font-bold text-brand-navy">{service.time}</p>
+                <h3 className="text-base font-semibold text-warm-text">{service.name}</h3>
+                <p className="mt-3 text-xl font-semibold text-brand-navy tracking-tight">{service.time}</p>
                 {service.location && (
                   <p className="mt-2 text-sm text-muted-text flex items-center gap-1">
                     <svg

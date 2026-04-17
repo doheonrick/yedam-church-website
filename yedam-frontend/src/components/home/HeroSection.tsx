@@ -47,47 +47,47 @@ export default function HeroSection() {
           </span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.05] tracking-[-0.03em] text-balance">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-[-0.02em] text-balance">
           달라스{' '}
           <span className="text-brand-gold">예닮</span>
           교회
         </h1>
 
-        <p className="mt-8 text-lg md:text-xl text-white/75 max-w-2xl leading-relaxed font-medium">
+        <p className="mt-8 text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
           {siteInfo.slogan}
         </p>
 
         <div className="mt-12 flex flex-wrap gap-4">
           <Link
             to="/worship"
-            className="bg-brand-gold text-brand-navy hover:bg-brand-gold-light font-semibold px-8 py-3.5 rounded-full transition-colors shadow-lg shadow-brand-gold/20"
+            className="bg-brand-gold text-brand-navy hover:bg-brand-gold-light font-medium px-8 py-3.5 rounded-full transition-colors shadow-lg shadow-brand-gold/20"
           >
             예배 안내
           </Link>
           <Link
-            to="/sermons"
+            to="/about"
             className="border border-white/40 text-white hover:bg-white/10 px-8 py-3.5 rounded-full transition-colors"
           >
-            설교 듣기
+            교회 소개
           </Link>
         </div>
 
         {/* 하단 예배 시간 스트립 */}
         <div className="mt-16 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl">
           <div>
-            <p className="text-2xl md:text-3xl text-brand-gold font-black tracking-tight">
+            <p className="text-xl md:text-2xl text-brand-gold font-semibold tracking-tight">
               주일 9:00 · 11:00
             </p>
             <p className="mt-1 text-sm text-white/60">주일 예배 · 본당</p>
           </div>
           <div>
-            <p className="text-2xl md:text-3xl text-brand-gold font-black tracking-tight">
+            <p className="text-xl md:text-2xl text-brand-gold font-semibold tracking-tight">
               수요 7:30 PM
             </p>
             <p className="mt-1 text-sm text-white/60">수요예배 · 본당</p>
           </div>
           <div>
-            <p className="text-2xl md:text-3xl text-brand-gold font-black tracking-tight">
+            <p className="text-xl md:text-2xl text-brand-gold font-semibold tracking-tight">
               화~금 6:00 AM
             </p>
             <p className="mt-1 text-sm text-white/60">새벽기도회 · Zoom</p>

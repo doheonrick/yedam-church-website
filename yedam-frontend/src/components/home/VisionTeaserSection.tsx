@@ -24,7 +24,7 @@ export default function VisionTeaserSection() {
             <p className="text-brand-gold text-sm font-semibold uppercase tracking-[0.18em] mb-4">
               Our Vision
             </p>
-            <h2 className="text-3xl md:text-5xl font-black text-brand-navy leading-tight tracking-[-0.02em] text-balance">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy leading-tight tracking-[-0.02em] text-balance">
               영혼구원하여<br />
               <span className="text-brand-gold">예수 닮은 제자</span>로
             </h2>
@@ -56,7 +56,7 @@ export default function VisionTeaserSection() {
                 >
                   <path d="M10 3h4v6h6v4h-6v8h-4v-8H4V9h6V3z" />
                 </svg>
-                <p className="text-xl text-warm-text leading-relaxed font-semibold tracking-tight">
+                <p className="text-lg text-warm-text leading-relaxed font-medium">
                   "하나님은 사랑이시라. 사랑 안에 거하는 자는 하나님 안에 거하고 하나님도
                   그 안에 거하시느니라."
                 </p>
