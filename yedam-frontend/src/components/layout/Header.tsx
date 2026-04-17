@@ -6,6 +6,7 @@ import { siteInfo } from '../../constants/siteInfo'
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [openMenu, setOpenMenu] = useState<string | null>(null)
+  const [scrolled, setScrolled] = useState(false)
   const navRef = useRef<HTMLElement>(null)
   const location = useLocation()
 
@@ -14,6 +15,14 @@ export default function Header() {
     setMobileOpen(false)
     setOpenMenu(null)
   }, [location.pathname])
+
+  // 스크롤 감지
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   // 외부 클릭 시 드롭다운 닫기
   useEffect(() => {
@@ -25,12 +34,16 @@ export default function Header() {
     return () => document.removeEventListener('mousedown', onDown)
   }, [openMenu])
 
+  const headerCls = scrolled
+    ? 'bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm'
+    : 'bg-white/90 backdrop-blur-md border-b border-transparent'
+
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${headerCls}`}>
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-baseline gap-2">
-          <span className="text-xl font-bold text-gray-900">{siteInfo.shortName}</span>
-          <span className="hidden sm:inline text-xs text-gray-400">{siteInfo.nickname}</span>
+          <span className="text-xl font-bold text-brand-navy">{siteInfo.shortName}</span>
+          <span className="hidden sm:inline text-xs font-semibold text-brand-gold">{siteInfo.nickname}</span>
         </Link>
 
         <nav ref={navRef} className="hidden xl:flex items-center gap-1">
@@ -84,8 +97,8 @@ interface DesktopNavItemProps {
 
 function DesktopNavItem({ item, open, onToggle, onClose }: DesktopNavItemProps) {
   const linkClass =
-    'px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-700 transition-colors rounded'
-  const activeClass = 'text-blue-700'
+    'relative px-3 py-2 text-sm font-medium text-gray-700 hover:text-brand-navy transition-colors'
+  const activeClass = 'text-brand-navy font-semibold border-b-2 border-brand-gold'
 
   if (!item.children || item.children.length === 0) {
     if (item.external) {
@@ -137,7 +150,7 @@ function DesktopNavItem({ item, open, onToggle, onClose }: DesktopNavItemProps) 
               className={({ isActive }) =>
                 `block px-4 py-2 text-sm transition-colors ${
                   isActive
-                    ? 'bg-blue-50 text-blue-700 font-medium'
+                    ? 'bg-brand-navy/5 text-brand-navy font-medium'
                     : 'text-gray-700 hover:bg-gray-50'
                 }`
               }
@@ -184,7 +197,7 @@ function MobileNavItem({ item }: MobileNavItemProps) {
           end={item.path === '/'}
           className={({ isActive }) =>
             `block px-3 py-3 text-sm rounded ${
-              isActive ? 'text-blue-700 font-medium bg-blue-50' : 'text-gray-700'
+              isActive ? 'text-brand-navy font-semibold bg-brand-navy/5' : 'text-gray-700'
             }`
           }
         >
@@ -221,7 +234,7 @@ function MobileNavItem({ item }: MobileNavItemProps) {
                 to={child.path}
                 className={({ isActive }) =>
                   `block px-3 py-2 text-sm rounded ${
-                    isActive ? 'text-blue-700 font-medium' : 'text-gray-600'
+                    isActive ? 'text-brand-navy font-semibold' : 'text-gray-600'
                   }`
                 }
               >
