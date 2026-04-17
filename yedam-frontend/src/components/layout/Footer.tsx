@@ -15,20 +15,13 @@ export default function Footer() {
         <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
           {/* 컬럼1: 브랜딩 (2칸) */}
           <div className="col-span-2">
-            <div className="flex items-center gap-3">
-              <img
-                src="/logo.png"
-                alt={`${siteInfo.shortName} 로고`}
-                className="w-12 h-12 object-contain bg-white/5 rounded-md p-1"
-              />
-              <div>
-                <h3 className="text-white text-xl font-bold">{siteInfo.name}</h3>
-                <p className="text-brand-gold text-sm mt-0.5">
-                  {siteInfo.nameEn} · {siteInfo.nickname}
-                </p>
-              </div>
-            </div>
-            <p className="text-white/60 text-sm mt-3 leading-relaxed max-w-md">
+            <img
+              src="/logo.png"
+              alt={siteInfo.name}
+              className="h-24 w-auto object-contain bg-white/95 rounded-lg p-2"
+            />
+            <p className="text-brand-gold text-sm mt-4">{siteInfo.nickname}</p>
+            <p className="text-white/60 text-sm mt-2 leading-relaxed max-w-md">
               {siteInfo.slogan}
             </p>
             <div className="mt-6 flex items-center gap-2">
