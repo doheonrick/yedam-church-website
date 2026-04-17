@@ -5,9 +5,9 @@
   --color-brand-navy:      #1B3A6B;
   --color-brand-navy-dark: #0F2347;
   --color-brand-navy-mid:  #254E94;
-  --color-brand-gold:      #B8882E;
-  --color-brand-gold-light:#D4A847;
-  --color-brand-gold-pale: #F5EDDA;
+  --color-brand-gold:      #E8991A;
+  --color-brand-gold-light:#F0AD30;
+  --color-brand-gold-pale: #FEF3C7;
 
   /* 따뜻한 배경 시스템 (gray-50 대체) */
   --color-warm-cream:  #FAF8F4;
@@ -19,8 +19,8 @@
   --color-muted-text:  #6B6560;
 
   /* 폰트 */
-  --font-sans:    'Noto Sans KR', system-ui, sans-serif;
-  --font-display: 'Lora', 'Noto Serif KR', Georgia, serif;
+  --font-sans:    'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-display: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 @layer base {

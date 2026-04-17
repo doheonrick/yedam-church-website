@@ -24,13 +24,13 @@ export default function VisionTeaserSection() {
             <p className="text-brand-gold text-sm font-semibold uppercase tracking-[0.18em] mb-4">
               Our Vision
             </p>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-brand-navy leading-tight tracking-tight text-balance">
-              말씀을 심고,<br />
-              <span className="text-brand-gold">공동체</span>를 세웁니다
+            <h2 className="text-3xl md:text-5xl font-black text-brand-navy leading-tight tracking-[-0.02em] text-balance">
+              영혼구원하여<br />
+              <span className="text-brand-gold">예수 닮은 제자</span>로
             </h2>
             <p className="mt-6 text-lg text-warm-text/80 leading-relaxed max-w-xl">
-              예닮교회는 달라스에서 하나님의 말씀 위에 뿌리내린 따뜻한 신앙 공동체를
-              이루어갑니다. 세대를 잇는 기도와 섬김으로 이웃과 열방을 향해 나아갑니다.
+              예닮교회는 가정교회 목회자를 세우고, 다음 세대의 자녀 교육을 책임지는
+              두 가지 비전을 중심으로 달라스에서 예수님을 닮아가는 공동체를 이루어갑니다.
             </p>
             <div className="mt-8">
               <Button to="/vision" variant="outline">
@@ -56,11 +56,11 @@ export default function VisionTeaserSection() {
                 >
                   <path d="M10 3h4v6h6v4h-6v8h-4v-8H4V9h6V3z" />
                 </svg>
-                <p className="font-display italic text-xl text-warm-text leading-relaxed">
+                <p className="text-xl text-warm-text leading-relaxed font-semibold tracking-tight">
                   "하나님은 사랑이시라. 사랑 안에 거하는 자는 하나님 안에 거하고 하나님도
                   그 안에 거하시느니라."
                 </p>
-                <p className="mt-4 text-sm text-muted-text">— 요한일서 4:16</p>
+                <p className="mt-4 text-sm text-muted-text font-medium">— 요한일서 4:16</p>
               </div>
             </div>
           </div>

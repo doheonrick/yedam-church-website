@@ -39,7 +39,7 @@ export default function LatestSermonsSection() {
                         height="24"
                         patternUnits="userSpaceOnUse"
                       >
-                        <circle cx="2" cy="2" r="1" fill="#D4A847" />
+                        <circle cx="2" cy="2" r="1" fill="#F0AD30" />
                       </pattern>
                     </defs>
                     <rect width="100%" height="100%" fill={`url(#sermon-dots-${sermon.id})`} />
@@ -51,13 +51,13 @@ export default function LatestSermonsSection() {
                     height="48"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="#D4A847"
+                    stroke="#F0AD30"
                     strokeWidth="1.2"
                     className="opacity-80"
                     aria-hidden="true"
                   >
                     <circle cx="12" cy="12" r="10" />
-                    <polygon points="10 8 16 12 10 16 10 8" fill="#D4A847" />
+                    <polygon points="10 8 16 12 10 16 10 8" fill="#F0AD30" />
                   </svg>
                 </div>
               </div>
