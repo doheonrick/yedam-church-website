@@ -1,7 +1,11 @@
+import PageBanner from '../components/common/PageBanner'
+import StaffGrid from '../components/about/StaffGrid'
+
 export default function StaffPage() {
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold">섬기는 분들</h1>
-    </div>
+    <>
+      <PageBanner title="섬기는 분들" subtitle="예닮교회를 섬기는 사역자들을 소개합니다." />
+      <StaffGrid />
+    </>
   )
 }
