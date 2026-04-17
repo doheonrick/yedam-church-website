@@ -4,16 +4,16 @@ import type { Sermon } from '../types/sermon'
 export const mockSermons: Sermon[] = [
   {
     id: 's-2026-04-12',
-    title: '주일 연합목장 설교',
+    title: '주일예배 설교',
     preacher: '이우철 목사',
     scripture: '본문 미정',
     date: '2026-04-12',
     series: '주일예배',
-    description: '연합목장 주일 설교 영상입니다.',
+    description: '주일예배 설교 영상입니다.',
   },
   {
     id: 's-2026-04-05',
-    title: '주일 연합목장 설교',
+    title: '주일예배 설교',
     preacher: '이우철 목사',
     scripture: '본문 미정',
     date: '2026-04-05',
@@ -29,7 +29,7 @@ export const mockSermons: Sermon[] = [
   },
   {
     id: 's-2026-03-22',
-    title: '주일 연합목장 설교',
+    title: '주일예배 설교',
     preacher: '이우철 목사',
     scripture: '본문 미정',
     date: '2026-03-22',
@@ -37,7 +37,7 @@ export const mockSermons: Sermon[] = [
   },
   {
     id: 's-2026-03-15',
-    title: '주일 연합목장 설교',
+    title: '주일예배 설교',
     preacher: '이우철 목사',
     scripture: '본문 미정',
     date: '2026-03-15',
@@ -45,7 +45,7 @@ export const mockSermons: Sermon[] = [
   },
   {
     id: 's-2026-03-08',
-    title: '주일 연합목장 설교',
+    title: '주일예배 설교',
     preacher: '이우철 목사',
     scripture: '본문 미정',
     date: '2026-03-08',
@@ -61,7 +61,7 @@ export const mockSermons: Sermon[] = [
   },
   {
     id: 's-2026-02-22',
-    title: '주일 연합목장 설교',
+    title: '주일예배 설교',
     preacher: '이우철 목사',
     scripture: '본문 미정',
     date: '2026-02-22',
@@ -69,7 +69,7 @@ export const mockSermons: Sermon[] = [
   },
   {
     id: 's-2026-02-15',
-    title: '주일 연합목장 설교',
+    title: '주일예배 설교',
     preacher: '이우철 목사',
     scripture: '본문 미정',
     date: '2026-02-15',
@@ -77,7 +77,7 @@ export const mockSermons: Sermon[] = [
   },
   {
     id: 's-2026-02-08',
-    title: '주일 연합목장 설교',
+    title: '주일예배 설교',
     preacher: '이우철 목사',
     scripture: '본문 미정',
     date: '2026-02-08',
@@ -93,7 +93,7 @@ export const mockSermons: Sermon[] = [
   },
   {
     id: 's-2026-01-25',
-    title: '주일 연합목장 설교',
+    title: '주일예배 설교',
     preacher: '이우철 목사',
     scripture: '본문 미정',
     date: '2026-01-25',
