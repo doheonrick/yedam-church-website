@@ -1,8 +1,17 @@
+import HeroSection from '../components/home/HeroSection'
+import WorshipTimesSection from '../components/home/WorshipTimesSection'
+import LatestSermonsSection from '../components/home/LatestSermonsSection'
+import LatestNewsSection from '../components/home/LatestNewsSection'
+import VisitSection from '../components/home/VisitSection'
+
 export default function HomePage() {
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold">홈</h1>
-      <p className="mt-4 text-gray-600">예닮교회에 오신 것을 환영합니다.</p>
-    </div>
+    <>
+      <HeroSection />
+      <WorshipTimesSection />
+      <LatestSermonsSection />
+      <LatestNewsSection />
+      <VisitSection />
+    </>
   )
 }
