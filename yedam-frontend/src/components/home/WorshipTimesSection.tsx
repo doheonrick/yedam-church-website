@@ -5,7 +5,7 @@ import { worshipSchedule } from '../../constants/worshipSchedule'
 
 export default function WorshipTimesSection() {
   return (
-    <section className="bg-gray-50 py-16 md:py-20">
+    <section className="bg-warm-cream py-16 md:py-20">
       <Container>
         <SectionTitle
           eyebrow="Worship"
@@ -17,14 +17,14 @@ export default function WorshipTimesSection() {
           {worshipSchedule.map((service) => (
             <div
               key={service.name}
-              className="relative bg-white rounded-xl border border-gray-100 p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className="relative bg-white rounded-xl border border-warm-border p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               <div className="absolute top-0 left-0 w-1 h-full bg-brand-gold rounded-l-xl" />
               <div className="pl-4">
-                <h3 className="text-lg font-semibold text-gray-900">{service.name}</h3>
-                <p className="mt-3 text-2xl font-bold text-brand-navy">{service.time}</p>
+                <h3 className="font-display text-lg font-semibold text-warm-text">{service.name}</h3>
+                <p className="font-display mt-3 text-2xl font-bold text-brand-navy">{service.time}</p>
                 {service.location && (
-                  <p className="mt-2 text-sm text-gray-500 flex items-center gap-1">
+                  <p className="mt-2 text-sm text-muted-text flex items-center gap-1">
                     <svg
                       width="14"
                       height="14"
