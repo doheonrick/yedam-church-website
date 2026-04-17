@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #1a3a6e;
+    --color-primary-light: #2a5298;
+    --color-accent: #c9a84c;
+    --color-text: #1f2937;
+    --color-text-muted: #6b7280;
+    --color-bg: #ffffff;
+    --color-bg-soft: #f9fafb;
+  }
+
+  body {
+    @apply m-0 bg-white text-gray-800 antialiased;
+    font-family: 'Noto Sans KR', system-ui, sans-serif;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
