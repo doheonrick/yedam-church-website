@@ -9,8 +9,8 @@ interface CardProps {
 }
 
 export default function Card({ children, to, className = '', hoverable = false }: CardProps) {
-  const base = `rounded-lg border border-gray-200 bg-white overflow-hidden ${
-    hoverable ? 'transition-shadow hover:shadow-md' : ''
+  const base = `rounded-xl border border-gray-100 bg-white overflow-hidden ${
+    hoverable ? 'transition-all duration-300 hover:shadow-lg hover:-translate-y-1' : ''
   } ${className}`
 
   if (to) {
@@ -29,9 +29,9 @@ interface CardSectionProps {
 }
 
 Card.Body = function CardBody({ children, className = '' }: CardSectionProps) {
-  return <div className={`p-5 ${className}`}>{children}</div>
+  return <div className={`p-6 ${className}`}>{children}</div>
 }
 
 Card.Image = function CardImage({ src, alt }: { src: string; alt: string }) {
-  return <img src={src} alt={alt} className="w-full h-48 object-cover" />
+  return <img src={src} alt={alt} className="w-full h-52 object-cover" />
 }
