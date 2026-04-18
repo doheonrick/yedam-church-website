@@ -8,7 +8,7 @@ interface InfoItem {
   sub?: string
 }
 
-const ICON_CLASS = 'w-5 h-5 text-blue-700'
+const ICON_CLASS = 'w-5 h-5 text-brand-navy'
 
 export default function ContactInfo() {
   const items: InfoItem[] = [
@@ -66,7 +66,7 @@ export default function ContactInfo() {
           key={it.label}
           className="flex items-start gap-4 p-5 rounded-lg border border-gray-200 bg-white"
         >
-          <div className="shrink-0 w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+          <div className="shrink-0 w-10 h-10 rounded-full bg-brand-gold-pale flex items-center justify-center">
             {it.icon}
           </div>
           <div className="min-w-0">
@@ -78,7 +78,7 @@ export default function ContactInfo() {
                 href={it.href}
                 target={it.href.startsWith('http') ? '_blank' : undefined}
                 rel={it.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="mt-1 block text-sm text-gray-900 hover:text-blue-700 break-words"
+                className="mt-1 block text-sm text-gray-900 hover:text-brand-navy break-words"
               >
                 {it.value}
               </a>

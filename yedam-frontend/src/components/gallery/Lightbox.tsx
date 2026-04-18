@@ -101,7 +101,7 @@ export default function Lightbox({ items, index, onClose, onIndexChange }: Light
         className="px-4 sm:px-6 py-4 text-white text-center"
         onClick={(e) => e.stopPropagation()}
       >
-        <p className="text-xs text-blue-300">{item.category}</p>
+        <p className="text-xs text-brand-gold">{item.category}</p>
         <h3 className="mt-1 text-base sm:text-lg font-semibold">{item.title}</h3>
         <p className="mt-1 text-xs text-gray-400">{formatDateKorean(item.date)}</p>
         {item.description && (

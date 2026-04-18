@@ -10,7 +10,25 @@ export default function Footer() {
   )
 
   return (
-    <footer className="bg-brand-navy text-white mt-auto">
+    <footer className="relative bg-brand-navy text-white mt-auto">
+      {/* 상단 골드 디바이더 + 십자가 */}
+      <div className="relative h-px bg-gradient-to-r from-transparent via-brand-gold/60 to-transparent">
+        <div className="absolute left-1/2 -translate-x-1/2 -top-3 bg-brand-navy px-3">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            className="text-brand-gold"
+            aria-hidden="true"
+          >
+            <path d="M10 3h4v6h6v4h-6v8h-4v-8H4V9h6V3z" />
+          </svg>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
           {/* 컬럼1: 브랜딩 (2칸) */}

@@ -16,14 +16,7 @@ export const mainNav: NavItem[] = [
       { label: '연혁', path: '/history' },
     ],
   },
-  {
-    label: '목회자코너',
-    path: '/sermons',
-    children: [
-      { label: '설교', path: '/sermons' },
-      { label: '목회칼럼', path: '/columns' },
-    ],
-  },
+  { label: '목회칼럼', path: '/columns' },
   { label: '예배 안내', path: '/worship' },
   {
     label: '가정교회',

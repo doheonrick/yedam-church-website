@@ -27,7 +27,7 @@ export default function Pagination({
         type="button"
         onClick={() => onChange(page - 1)}
         disabled={page === 1}
-        className="px-3 py-2 text-sm rounded border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed"
+        className="px-3 py-2 text-sm rounded border border-gray-300 text-gray-700 hover:bg-warm-cream disabled:opacity-40 disabled:cursor-not-allowed"
       >
         이전
       </button>
@@ -44,8 +44,8 @@ export default function Pagination({
             aria-current={p === page ? 'page' : undefined}
             className={`min-w-[36px] h-9 rounded text-sm ${
               p === page
-                ? 'bg-blue-700 text-white font-semibold'
-                : 'text-gray-700 hover:bg-gray-100'
+                ? 'bg-brand-navy text-white font-semibold'
+                : 'text-gray-700 hover:bg-warm-stone'
             }`}
           >
             {p}
@@ -56,7 +56,7 @@ export default function Pagination({
         type="button"
         onClick={() => onChange(page + 1)}
         disabled={page === totalPages}
-        className="px-3 py-2 text-sm rounded border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed"
+        className="px-3 py-2 text-sm rounded border border-gray-300 text-gray-700 hover:bg-warm-cream disabled:opacity-40 disabled:cursor-not-allowed"
       >
         다음
       </button>

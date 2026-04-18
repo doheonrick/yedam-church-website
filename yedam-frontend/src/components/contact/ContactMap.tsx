@@ -6,7 +6,7 @@ export default function ContactMap() {
   const src = `https://www.google.com/maps?q=${query}&output=embed`
 
   return (
-    <div className="rounded-lg overflow-hidden border border-gray-200 bg-gray-50">
+    <div className="rounded-lg overflow-hidden border border-gray-200 bg-warm-cream">
       <div className="aspect-[16/9] sm:aspect-[16/7]">
         <iframe
           src={src}
@@ -22,7 +22,7 @@ export default function ContactMap() {
           href={`https://maps.google.com/?q=${query}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="ml-3 shrink-0 text-blue-700 hover:underline"
+          className="ml-3 shrink-0 text-brand-navy hover:underline"
         >
           큰 지도로 보기 →
         </a>

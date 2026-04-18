@@ -26,7 +26,7 @@ export default function ContactPage() {
         </Container>
       </section>
 
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-12 md:py-16 bg-warm-cream">
         <Container size="md">
           <SectionTitle title="문의하기" description="궁금하신 점이 있다면 언제든 연락 주세요." />
           <div className="mt-8 p-6 sm:p-8 bg-white rounded-lg border border-gray-200">

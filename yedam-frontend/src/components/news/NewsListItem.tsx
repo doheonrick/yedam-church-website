@@ -7,7 +7,7 @@ interface NewsListItemProps {
 }
 
 const CATEGORY_STYLES: Record<News['category'], string> = {
-  공지: 'bg-blue-50 text-blue-700 border-blue-200',
+  공지: 'bg-brand-gold-pale text-brand-navy border-warm-border',
   행사: 'bg-amber-50 text-amber-700 border-amber-200',
 }
 
@@ -15,7 +15,7 @@ export default function NewsListItem({ news }: NewsListItemProps) {
   return (
     <Link
       to={`/news/${news.id}`}
-      className="block group border-b border-gray-200 py-5 px-2 hover:bg-gray-50 transition-colors"
+      className="block group border-b border-gray-200 py-5 px-2 hover:bg-warm-cream transition-colors"
     >
       <div className="flex items-start gap-3">
         <span
@@ -40,7 +40,7 @@ export default function NewsListItem({ news }: NewsListItemProps) {
                 <path d="M16 3v6l3 3v2H5v-2l3-3V3h8z" />
               </svg>
             )}
-            <h3 className="text-base font-semibold text-gray-900 group-hover:text-blue-700 line-clamp-1">
+            <h3 className="text-base font-semibold text-gray-900 group-hover:text-brand-navy line-clamp-1">
               {news.title}
             </h3>
           </div>

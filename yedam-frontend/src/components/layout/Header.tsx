@@ -35,13 +35,16 @@ export default function Header() {
   }, [openMenu])
 
   const headerCls = scrolled
-    ? 'bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm'
-    : 'bg-white/90 backdrop-blur-md border-b border-transparent'
+    ? 'bg-warm-cream/95 backdrop-blur-md border-b border-warm-border shadow-sm'
+    : 'bg-warm-cream/90 backdrop-blur-md border-b border-transparent'
 
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${headerCls}`}>
+      {/* 상단 골드 액센트 라인 */}
+      <div className="h-0.5 bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-60" />
+
       <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center" aria-label={siteInfo.name}>
+        <Link to="/" className="flex items-center gap-3" aria-label={siteInfo.name}>
           <img
             src="/logo.png"
             alt={siteInfo.name}
@@ -49,7 +52,7 @@ export default function Header() {
           />
         </Link>
 
-        <nav ref={navRef} className="hidden xl:flex items-center gap-1">
+        <nav ref={navRef} className="hidden lg:flex items-center gap-1">
           {mainNav.map((item) => (
             <DesktopNavItem
               key={item.path}
@@ -64,7 +67,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setMobileOpen((v) => !v)}
-          className="xl:hidden p-2 text-gray-700"
+          className="lg:hidden p-2 text-warm-text"
           aria-label={mobileOpen ? '메뉴 닫기' : '메뉴 열기'}
           aria-expanded={mobileOpen}
         >
@@ -79,7 +82,7 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <nav className="xl:hidden border-t border-gray-200 bg-white max-h-[calc(100vh-4rem)] overflow-y-auto">
+        <nav className="lg:hidden border-t border-warm-border bg-warm-cream max-h-[calc(100vh-4rem)] overflow-y-auto">
           <ul className="px-2 py-2">
             {mainNav.map((item) => (
               <MobileNavItem key={item.path} item={item} />
@@ -100,8 +103,9 @@ interface DesktopNavItemProps {
 
 function DesktopNavItem({ item, open, onToggle, onClose }: DesktopNavItemProps) {
   const linkClass =
-    'relative px-3 py-2 text-sm font-medium text-gray-700 hover:text-brand-navy transition-colors'
-  const activeClass = 'text-brand-navy font-semibold border-b-2 border-brand-gold'
+    'relative px-3 py-2 text-sm font-medium text-warm-text/80 hover:text-brand-navy transition-colors'
+  const activeClass =
+    'text-brand-navy font-semibold after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-brand-gold'
 
   if (!item.children || item.children.length === 0) {
     if (item.external) {
@@ -139,22 +143,30 @@ function DesktopNavItem({ item, open, onToggle, onClose }: DesktopNavItemProps) 
         className={`${linkClass} inline-flex items-center gap-1`}
       >
         {item.label}
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          fill="currentColor"
+          className={`transition-transform ${open ? 'rotate-180' : ''}`}
+        >
           <path d="M2 4l4 4 4-4z" />
         </svg>
       </button>
       {open && (
-        <div className="absolute left-0 mt-1 min-w-[180px] bg-white border border-gray-200 rounded-md shadow-lg py-1 z-50">
+        <div className="absolute left-0 mt-1 min-w-[200px] bg-white border border-warm-border rounded-md shadow-lg py-2 z-50 overflow-hidden">
+          {/* 상단 골드 라인 */}
+          <div className="absolute top-0 left-0 right-0 h-0.5 bg-brand-gold" />
           {item.children.map((child) => (
             <NavLink
               key={child.path}
               to={child.path}
               onClick={onClose}
               className={({ isActive }) =>
-                `block px-4 py-2 text-sm transition-colors ${
+                `block px-4 py-2.5 text-sm transition-colors ${
                   isActive
-                    ? 'bg-brand-navy/5 text-brand-navy font-medium'
-                    : 'text-gray-700 hover:bg-gray-50'
+                    ? 'bg-brand-gold-pale text-brand-navy font-medium'
+                    : 'text-warm-text/80 hover:bg-warm-cream hover:text-brand-navy'
                 }`
               }
             >
@@ -183,7 +195,7 @@ function MobileNavItem({ item }: MobileNavItemProps) {
             href={item.path}
             target="_blank"
             rel="noreferrer noopener"
-            className="flex items-center gap-1 px-3 py-3 text-sm text-gray-700"
+            className="flex items-center gap-1 px-3 py-3 text-sm text-warm-text/80"
           >
             {item.label}
             <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -200,7 +212,7 @@ function MobileNavItem({ item }: MobileNavItemProps) {
           end={item.path === '/'}
           className={({ isActive }) =>
             `block px-3 py-3 text-sm rounded ${
-              isActive ? 'text-brand-navy font-semibold bg-brand-navy/5' : 'text-gray-700'
+              isActive ? 'text-brand-navy font-semibold bg-brand-gold-pale' : 'text-warm-text/80'
             }`
           }
         >
@@ -216,7 +228,7 @@ function MobileNavItem({ item }: MobileNavItemProps) {
         type="button"
         onClick={() => setExpanded((v) => !v)}
         aria-expanded={expanded}
-        className="w-full flex items-center justify-between px-3 py-3 text-sm text-gray-700"
+        className="w-full flex items-center justify-between px-3 py-3 text-sm text-warm-text/80"
       >
         <span>{item.label}</span>
         <svg
@@ -230,14 +242,14 @@ function MobileNavItem({ item }: MobileNavItemProps) {
         </svg>
       </button>
       {expanded && (
-        <ul className="pl-4 pb-2">
+        <ul className="pl-4 pb-2 border-l-2 border-brand-gold/30 ml-3">
           {item.children!.map((child) => (
             <li key={child.path}>
               <NavLink
                 to={child.path}
                 className={({ isActive }) =>
                   `block px-3 py-2 text-sm rounded ${
-                    isActive ? 'text-brand-navy font-semibold' : 'text-gray-600'
+                    isActive ? 'text-brand-navy font-semibold' : 'text-muted-text'
                   }`
                 }
               >

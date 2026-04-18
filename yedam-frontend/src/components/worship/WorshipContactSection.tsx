@@ -4,10 +4,10 @@ import { siteInfo } from '../../constants/siteInfo'
 
 export default function WorshipContactSection() {
   return (
-    <section className="bg-gray-50 py-16 md:py-20">
+    <section className="bg-warm-cream py-16 md:py-20">
       <Container size="md">
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-700">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-navy">
             Visit Us
           </p>
           <h2 className="mt-3 text-2xl md:text-3xl font-bold text-gray-900">
